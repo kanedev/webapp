@@ -1,0 +1,591 @@
+/* 
+ * 6.0 Sections
+ */
+section {
+  text-align: center;
+  hr
+    {
+  width: 25%;
+  color: $color-gray-light;
+  border-color: $color-gray-light;
+  background-color: $color-gray-light;
+}
+
+.section-subtitle {
+  font-family: $font-secondary;
+  font-size: 30px;
+  font-weight: 400;
+  color: $color-gray-light;
+        /* Landscape tablets and medium desktops */
+  @media (min-width: 992px) and (max-width: 1199px)
+        {
+            font-size: 30px;
+  font-weight: 400;
+}
+
+        /* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  font-size: 20px;
+            font-weight: 300;
+}
+
+        /* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  font-size: 20px;
+            font-weight: 200;
+}
+
+        /* Portrait phones and smaller */
+@media (max-width: 480px) {
+  font-size: 18px;
+            font-weight: 100;
+}
+    }
+
+.section-description {
+  font-size: 18px;
+  text-align: justify;
+  color: $color-gray;
+}
+}
+
+/* 
+ * 6.1 Section: About 
+ */
+#about {
+  padding: 0;
+  background-color: $color-white;
+  .img-about
+    {
+        min-height: 200px;
+}
+}
+
+/* 
+ * 6.2 Section: Statistic 
+ */
+#statistic {
+  background: url(../../../media/image03.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  .statistic-overlay
+    {
+        padding: 1.5% 0;
+  background-color: $primary-color;
+  @include  opacity(.8);
+}
+}
+
+/**/
+
+/* 
+ * 6.3 Section: Services 
+ */
+#services {
+  padding: 2% 0;
+  background-color: $color-white;
+  .service-description
+    {
+        font-size: 14px;
+  color: $color-gray;
+}
+
+.icon-box {
+  z-index: 2;
+  overflow-y: hidden;
+  width: 150px;
+  height: 150px;
+  border-bottom-style: solid;
+  border-bottom-color: $secondary-color;
+  border-bottom-size: 1px;
+  //margin-bottom: 40x;
+}
+
+.icon-box-background {
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  -webkit-transform: translate(25px, 10px)rotate(45deg);
+  -moz-transform: translate(25px, 50px)rotate(45deg);
+  -ms-transform: translate(25px, 10px)rotate(45deg);
+  -o-transform: translate(25px, 10px)rotate(45deg);
+  border-radius: 10px;
+  @include gradient-directional( $secondary-color, $primary-color, 180deg);
+}
+
+.icon {
+  overflow-y: hidden;
+  -webkit-transform: rotate(-45deg) translate(-15px, 15px);
+  -moz-transform: rotate(-45deg) translate(-15px, 15px);
+  -ms-transform: rotate(-45deg) translate(-15px, 15px);
+  -o-transform: rotate(-45deg) translate(-15px, 15px);
+  text-align: center;
+  color: $color-white;
+}
+}
+/* 
+ * 6.4 Section: Works 
+ */
+#works {
+  padding-top: 2%;
+  padding-bottom: 4%;
+  background-color: $primary-color;
+ /* IE7 */
+  @include pills-nav();
+    hr
+    {
+        color: $primary-color-light !important;
+  border-color: $primary-color-light !important;
+  background-color: $primary-color-light !important;
+}
+
+.section-subtitle {
+  color: $primary-color-light  !important;
+}
+
+.centered-pills {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.centered-pills ul.nav-pills {
+  display: inline-block;
+}
+
+.centered-pills li {
+  display: inline;
+}
+
+.centered-pills a {
+  float: left;
+}
+
+* html .centered-pills ul.nav-pills {
+  display: inline;
+} /* IE6 */
+* + html .centered-pills ul.nav-pills {
+  display: inline;
+}
+
+.work-content {
+  padding: 8 10 6 8;
+}
+
+.work-box {
+  position: relative;
+  z-index: 160;
+  overflow: hidden;
+}
+
+.work-box-overlay {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  @include  gradient-vertical($primary-color, $primary-color-dark);
+        @include opacity(0);
+        > i
+        {
+            padding-top: 20%;
+}
+    }
+
+.work-img {
+  z-index: -10;
+  -webkit-transition: all 1.5s ease-in-out;
+  -moz-transition: all 1.5s ease-in-out;
+  -ms-transition: all 1.5s ease-in-out;
+  -o-transition: all 1.5s ease-in-out;
+}
+
+.work-img-desc {
+  position: absolute;
+  z-index: 20;
+  top: 120%;
+  width: 90%;
+  height: auto;
+  margin: 5%;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  border-width: .5px;
+  border-style: solid;
+  border-color: $color-white;
+  > p
+        {
+            font-size: 18px;
+  font-weight: blod;
+  padding-top: 10px;
+  text-transform: uppercase;
+  color: $accent-color;
+            /*          font-family: $font-tertiary;
+            letter-spacing: 1px;
+            line-height: 32px;   */
+}
+    }
+
+.col-md-3,
+    .col-sm-6,
+    .col-xs-12 {
+  padding: 0 0 2 2;
+}
+
+.work-box:hover > a {
+  > .work-box-overlay
+        {
+            @include opacity(.5);
+}
+        >.work-img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+        >.work-img-desc {
+  top: 60%;
+}
+    }
+}
+
+
+/* 
+ * 6.5 Section: Testimonials 
+ */
+#testimonials {
+  //background: url(../../../media//image03.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  .testimonials-overlay
+    {
+        padding-top: 2%;
+  padding-bottom: 4%;
+  background-color: $primary-color;
+  @include  opacity(.8);
+}
+
+.testimonials-content {
+  padding: 2% 0;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $primary-color-light;
+}
+
+.testimonial-text {
+  font-family: $font-tertiary;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  color: $color-white;
+}
+}
+
+/* 
+ * 6.6 Section: Fonctions 
+ */
+#fonctions {
+  padding: 2% 0;
+  background-color: $color-white;
+  .fonction-content
+    {
+        padding: 20px;
+}
+
+.fonction-description {
+  font-size: 14px;
+  color: $color-gray;
+}
+
+.icon-background {
+  width: 120px;
+  height: 120px;
+  border: 4px solid $primary-color;
+  border-radius: 120px;
+}
+
+.icon {
+  position: relative;
+  top: 20%;
+  overflow-y: hidden;
+  text-align: center;
+  color: $secondary-color;
+}
+}
+
+/* 
+ * 6.7 Section: CTA 
+ */
+#CTA {
+  padding-top:4%;
+  padding-bottom: 3%;
+  background-color: $secondary-color;
+  
+ p
+    {
+       // margin-top: 15px;
+        font-family: $font-secondary;
+        font-size: 2em;
+        line-height: 1.5em;
+        font-weight: 500;
+        text-align: center;
+        text-transform: uppercase;
+        color: $color-white;
+}
+
+a {
+margin-top: 14%;    
+}
+
+}
+
+/* 
+ * 6.8 Section: Reasons 
+ */
+#reasons {
+  padding-top: 2%;
+  padding-bottom: 4%;
+  background-color: $primary-color;
+  hr
+    {
+        color: $primary-color-light !important;
+  border-color: $primary-color-light !important;
+  background-color: $primary-color-light !important;
+}
+
+.section-subtitle {
+  color: $primary-color-light  !important;
+}
+
+.reasons-content {
+  padding: 8 10 6 8;
+}
+
+.reasons-box {
+  position: relative;
+  z-index: 160;
+  overflow: hidden;
+}
+
+.section-description {
+  font-size: 18px;
+  //font-family: $font-secondary;
+  font-size: 1.2em;
+  font-weight: 500;
+  text-align: justify;
+  text-align: center;
+  color: $color-white;
+}
+
+.reasons-table {
+  // padding: 2% 0%;
+  border-width: 1px;
+  border-top-color: $primary-color-dark;
+  border-right-color: $primary-color-dark;
+  //   border-style: solid;
+  border-bottom-color: $primary-color;
+  border-left-color: $primary-color-dark;
+}
+
+.reasons-table-header {
+  color: $primary-color;
+        /*        padding: 2% 0%;*/
+  //   border-width: 1px;
+  //      border-style: solid;
+  //     border-color: $primary-color-light;
+  background-color: $primary-color-light;
+  p
+        {
+            margin: 0;
+  color: $color-white;
+}
+    }
+
+.reasons-table-body {
+  padding-bottom: 40px;
+        /*        padding: 2% 0%;
+        border-width: 1px;
+        border-style: solid;*/
+  //   border-color: $primary-color-light;
+  @include gradient-vertical($primary-color-light, $primary-color);
+}
+}
+
+
+/* 
+ * 6.9 Section: Partners 
+ */
+#partners {
+  background: url(../../../media/statistic.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  .partners-overlay
+    {
+        padding-top: 2%;
+  padding-bottom: 4%;
+  background-color: $primary-color;
+  @include  opacity(.8);
+}
+}
+
+/* 
+ * 6.10 Section:  Team
+ */
+#team {
+    padding: 2% 0;
+    background-color: $color-white;
+    p
+    {
+        margin: 0;
+    }
+
+    h4 {
+        font-size: 1.6em;
+        line-height: 0;
+        padding-top: 15px;
+        padding-bottom: 0;
+    }
+
+    img {
+        max-width: 200px !important;
+        max-height: 200px !important;
+    }
+
+    a {
+        color: $secondary-color;
+        &:hover
+            {
+            color: $accent-color;
+        }
+    }
+
+}
+
+/* 
+ * 6.11 Section: Reasons 
+ */
+#blog {
+    padding-top: 2%;
+    padding-bottom: 4%;
+    background-color: $primary-color;
+
+    hr{
+        color: $primary-color-light !important;
+        border-color: $primary-color-light !important;
+        background-color: $primary-color-light !important;
+
+    }
+
+    .section-subtitle {
+        color: $primary-color-light  !important;
+    }
+
+    h5{
+        margin-bottom: 5px;
+        font-size: 1.2em;
+        font-weight: 500;
+        text-align: left; 
+        line-height: 1.2em;
+        color:  $secondary-color-light; 
+    }
+
+    .blog-post {
+        border-style: solid;
+        padding:10px;
+        border-width: 1px;  
+        border-color:  $primary-color-light;
+
+        p {
+            color: $color-white;
+            font-size: 1em;
+            font-weight: 100;
+            text-align: left;
+            line-height: 1em;
+        }
+    }
+}
+
+/* 
+ * 6.12 Section: Plans 
+ */
+#plans {
+    padding-top: 2%;
+    padding-bottom: 4%;
+
+    .cel1 {
+        border-style: solid;
+        border-width: 2px;  
+        background-color: $primary-color-dark;
+        border-top-color: $primary-color-light;
+    }
+    
+    .cel2 {
+        border-style: solid;
+        border-width: 2px;  
+        background-color: $primary-color;
+        border-top-color: $primary-color-light;
+    }
+
+    .plan {
+        border-style: solid;
+        border-width: 1px;  
+        border-color:  $primary-color-light;
+     }
+     
+     .plan-header {
+         h4 {
+             line-height: 1.7;
+             margin-bottom: 0px;
+             color: $secondary-color-dark;
+         }
+         
+         p {
+             font-weight: bold;
+             font-family: $font-secondary;
+             margin :0px;
+             color: $secondary-color;
+            font-size: 20px;
+            }
+      span {
+             font-weight: bold;
+             color: $secondary-color-light;
+            font-size: 30px;
+
+
+           }
+     }
+     
+     .plan-body {
+         p {
+             margin :0px;
+             color: $color-white;
+         }
+     }
+     
+    .plan-footer {
+        border-style: solid;
+        border-width: 2px;  
+        border-top-color: $primary-color-light;
+        padding-top: 6%;
+        padding-bottom: 6%;
+        background-color: $primary-color;
+    }
+    
+    
+
+}
+
+
+
+
